@@ -11,7 +11,7 @@
   <script>
     previewImage(e) {
       e.preventDefault();
-      let previewImage = document.getElementById('preview-image');
+      var previewImage = document.getElementById('preview-image');
       previewImage.src = e.jsonFlickrFeed.items.media;
       previewImage.scrollIntoView();
     }
