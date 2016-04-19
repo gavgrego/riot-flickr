@@ -1,8 +1,8 @@
 <card>
-  <li each={ opts.imgs } if={data.items.media}>
+  <li each={ opts.imgs } if={media.m}>
     <div class="imgwrap">
       <a onclick="{previewImage}" href="">
-        <img onclick="{previewImage}" src="{data.items.media}" alt="image">
+        <img onclick="{previewImage}" src="{media.m}" alt="image">
         <span class="imgmask"></span>
       </a>
     </div>
@@ -11,8 +11,9 @@
   <script>
     previewImage(e) {
       e.preventDefault();
+      console.log("e.item.media.m", e.item.media.m);
       var previewImage = document.getElementById('preview-image');
-      previewImage.src = e.jsonFlickrFeed.items.media;
+      previewImage.src = e.item.media.m;
       previewImage.scrollIntoView();
     }
   </script>
