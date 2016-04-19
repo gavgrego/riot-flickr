@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="home padding-buffer">
+
+  <div class="photos-container">
+    <main class="photos-content">
+      <img id="photos-thumb" src="" alt="">
+      <gallery></gallery>
+    </main>
+  </div>
+
+  <script type="riot/tag" src="tags/gallery/card.tag"></script>
+  <script type="riot/tag" src="tags/gallery/gallery.tag"></script>
+  <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+  <script>
+    riot.mount('gallery')
+  </script>
+
+</div>
